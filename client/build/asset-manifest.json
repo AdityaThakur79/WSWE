@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "./static/css/main.51bc3ec1.css",
+    "main.js": "./static/js/main.4663c687.js",
+    "static/media/feature-2.PNG": "./static/media/feature-2.c06f5501dca9bcd975f2.PNG",
+    "static/media/hero.jpg": "./static/media/hero.ff1056681e6ba2a86ad8.jpg",
+    "static/media/pyscological.png": "./static/media/pyscological.cfdd52c04edde3890e0d.png",
+    "static/media/feature-3.png": "./static/media/feature-3.89feb0264000c5f9e8e3.png",
+    "static/media/suicide.png": "./static/media/suicide.7b82c2527907f41ed7ac.png",
+    "static/media/mental.png": "./static/media/mental.dc39a25658e4157f6b44.png",
+    "static/media/police.png": "./static/media/police.ae8e632e96b5f61d47f6.png",
+    "static/media/faq.png": "./static/media/faq.7f8bf5ce37810e1d90cb.png",
+    "static/media/feature-1.png": "./static/media/feature-1.e6fda64849814f90d918.png",
+    "static/media/feature-4.PNG": "./static/media/feature-4.2218dee5f1b56ed80ac6.PNG",
+    "static/media/workshop3.webp": "./static/media/workshop3.f9fc171899ad0a634038.webp",
+    "static/media/workshop2.jfif": "./static/media/workshop2.f4336033fbca5dec5274.jfif",
+    "static/media/ProfilePic.jfif": "./static/media/ProfilePic.e2a49832ab99bd3e7713.jfif",
+    "static/media/workshop1.jfif": "./static/media/workshop1.85d0c0017c7dfb427778.jfif",
+    "static/media/close.svg": "./static/media/close.c54d8b9555a182a1add78758fa8e3ac9.svg",
+    "static/media/logo.svg": "./static/media/logo.9591831ad3bd927f9435be2d36e110e2.svg",
+    "static/media/hamburgerMenu.svg": "./static/media/hamburgerMenu.2e70bb476e612b1a7db95901892cfd18.svg",
+    "static/media/lock.svg": "./static/media/lock.43ca3987cb3092f2ff97d86b65a32695.svg",
+    "index.html": "./index.html",
+    "main.51bc3ec1.css.map": "./static/css/main.51bc3ec1.css.map",
+    "main.4663c687.js.map": "./static/js/main.4663c687.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51bc3ec1.css",
+    "static/js/main.4663c687.js"
+  ]
+}
