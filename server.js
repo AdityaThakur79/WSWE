@@ -124,9 +124,9 @@ io.on("connection", (socket) => {
 //static files
 
 // Get the current file path
-const __filename = fileURLToPath(import.meta.url);
+// const __filename = fileURLToPath(import.meta.url);
 // Get the directory name
-const __dirname = path.dirname(__filename);
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Serve static files from the assets folder
 app.use(express.static(path.join(__dirname, "./client/dist")));
