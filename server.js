@@ -11,7 +11,7 @@ const { Server } = require("socket.io");
 const http = require("http");
 const locationModel = require("./models/locationModel");
 const path = require("path");
-import { fileURLToPath } from "url";
+const { fileURLToPath } = require("url");
 
 // configing the dotenv file
 dotenv.config();
