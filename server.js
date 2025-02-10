@@ -10,8 +10,7 @@ const cors = require("cors");
 const { Server } = require("socket.io");
 const http = require("http");
 const locationModel = require("./models/locationModel");
-const path = require("path");
-const { fileURLToPath } = require("url");
+const path = require("path"); 
 
 // configing the dotenv file
 dotenv.config();
@@ -37,10 +36,10 @@ app.use("/api/v1/admin", adminRoutes);
 app.use("/api/v1/job", jobRoutes);
 
 //static files
-app.use(express.static(path.join(__dirname, "./frontend/build")));
+app.use(express.static(path.join(__dirname, "./client/build")));
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./frontend/build/index.html"));
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 //adding new
