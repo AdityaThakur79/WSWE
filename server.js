@@ -10,7 +10,8 @@ const cors = require("cors");
 const { Server } = require("socket.io");
 const http = require("http");
 const locationModel = require("./models/locationModel");
-const path = require("path"); 
+const path = require("path");
+const { fileURLToPath } = require("url");
 
 // configing the dotenv file
 dotenv.config();
@@ -36,16 +37,10 @@ app.use("/api/v1/admin", adminRoutes);
 app.use("/api/v1/job", jobRoutes);
 
 //static files
-const buildPath = path.join(__dirname, "client/build");
+app.use(express.static(path.join(__dirname, "./frontend/build")));
 
-app.use(express.static(buildPath));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(buildPath, "index.html"), (err) => {
-    if (err) {
-      res.status(500).send("Error loading frontend");
-    }
-  });
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "./frontend/build/index.html"));
 });
 
 //adding new
@@ -103,7 +98,7 @@ app.post("/send-sos", async (req, res) => {
 // below is we are making the socket connection
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000", // Allow frontend running on port 3000
+    origin: "https://wswe.onrender.com/", // Allow frontend running on port 3000
     methods: ["GET", "POST"],
   },
 });
