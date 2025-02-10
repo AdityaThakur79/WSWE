@@ -1,0 +1,90 @@
+/* General card styling */
+.card-container {
+    width: 200px; /* Set the card width */
+    height: 220px; /* Set the card height */
+    background: linear-gradient(135deg, #f0f4ff, #d4e1ff); /* Gradient background */
+    border-radius: 15px; /* Rounded corners */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px; /* Add margin to space between cards */
+  }
+  
+  .card-content {
+    position: relative;
+    text-align: center;
+  }
+  
+  .text-content h3 {
+    font-size: 18px;
+    margin: 0;
+    color: #2d4a86;
+  }
+  
+  .text-content p {
+    font-size: 14px;
+    color: #89a1c8;
+    margin-top: 5px;
+  }
+  
+  .main-image {
+    position: absolute;
+    top: 20px;
+    width: 100px;
+    height: auto;
+  }
+  
+  /* Grid container for 3 cards */
+  .card-grid {
+    display: flex;
+    justify-content: space-around; /* Spread the cards evenly */
+    flex-wrap: wrap;
+  }
+  
+  /* Make it responsive for smaller screens */
+  @media (max-width: 768px) {
+    .card-container {
+      width: 150px; /* Smaller width for smaller screens */
+      height: 180px;
+    }
+  
+    .main-image {
+      width: 80px; /* Smaller image size */
+    }
+  
+    .text-content h3 {
+      font-size: 16px;
+    }
+  
+    .text-content p {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .card-grid {
+      flex-direction: column; /* Stack cards vertically on very small screens */
+      align-items: center;
+    }
+  
+    .card-container {
+      width: 100%; /* Full width for cards on small screens */
+      height: auto;
+    }
+  
+    .main-image {
+      width: 60px; /* Even smaller image for narrow screens */
+    }
+  
+    .text-content h3 {
+      font-size: 14px;
+    }
+  
+    .text-content p {
+      font-size: 10px;
+    }
+  }
+  
