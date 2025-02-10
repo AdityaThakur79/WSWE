@@ -12,6 +12,12 @@ const http = require("http");
 const locationModel = require("./models/locationModel");
 const path = require("path");
 
+// configing the dotenv file
+dotenv.config();
+// rest object
+const app = express();
+
+//Deplyment
 //static files
 app.use(express.static(path.join(__dirname, "./client/build")));
 
@@ -19,10 +25,6 @@ app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-// configing the dotenv file
-dotenv.config();
-// rest object
-const app = express();
 // creating the middleware
 const server = http.createServer(app);
 app.use(cors());
