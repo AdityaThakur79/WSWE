@@ -21,11 +21,14 @@ const app = express();
 // creating the middleware
 const server = http.createServer(app);
 app.use(cors());
+
 // Parse URL-encoded bodies (e.g., form data)
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
 // app.use(authMiddleware)
 app.use(morgan("dev"));
+
 // connection to database
 connectToDb();
 // below we are creating the routes
@@ -33,12 +36,10 @@ app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/admin", adminRoutes);
 app.use("/api/v1/job", jobRoutes);
 
-// Get the current file path
-const __dirname = path.resolve();
-
-// Serve static files from build directory
+//static files
 app.use(express.static(path.join(__dirname, "./client/build")));
-app.get("*", (req, res) => {
+
+app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
