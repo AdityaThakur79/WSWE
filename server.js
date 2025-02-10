@@ -34,19 +34,11 @@ app.use("/api/v1/admin", adminRoutes);
 app.use("/api/v1/job", jobRoutes);
 
 // Get the current file path
-// Get the directory name
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const __dirname = path.resolve();
 
-// Serve static files from the assets folder
-app.use(express.static(path.join(__dirname, "./client/dist")));
-
-// Route to serve `index.html`
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/dist/index.html"));
-});
+// Serve static files from build directory
 app.use(express.static(path.join(__dirname, "./client/build")));
-
-app.get("*", function (req, res) {
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
