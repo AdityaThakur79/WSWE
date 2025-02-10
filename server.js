@@ -36,16 +36,11 @@ app.use("/api/v1/admin", adminRoutes);
 app.use("/api/v1/job", jobRoutes);
 
 //static files
-const buildPath = path.join(__dirname, "client/build");
+//static files
+app.use(express.static(path.join(__dirname, "./frontend/build")));
 
-app.use(express.static(buildPath));
-
-app.get("*", (req, res) => {
-  res.sendFile(path.join(buildPath, "index.html"), (err) => {
-    if (err) {
-      res.status(500).send("Error loading frontend");
-    }
-  });
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "./frontend/build/index.html"));
 });
 
 //adding new
