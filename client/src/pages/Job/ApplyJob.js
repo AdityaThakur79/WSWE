@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import toast from "react-hot-toast";
+import { server } from "../..";
 
 const ApplyJob = () => {
   const params = useParams();
@@ -41,7 +42,7 @@ const ApplyJob = () => {
         return;
       }
       const response = await axios.post(
-        `http://localhost:8080/api/v1/job/${jobId}/apply-job`,
+        `${server}/api/v1/job/${jobId}/apply-job`,
         data,
         {
           headers: {

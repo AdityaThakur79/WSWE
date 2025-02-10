@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { server } from "../..";
+ 
 
 const AppliedJobs = () => {
   const [appliedJobs, setAppliedJobs] = useState([]);
@@ -14,14 +16,11 @@ const AppliedJobs = () => {
           alert("You must be logged in to create a job.");
           return;
         }
-        const response = await axios.get(
-          `http://localhost:8080/api/v1/job/applied-jobs`,
-          {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+        const response = await axios.get(`${server}/api/v1/job/applied-jobs`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
         setAppliedJobs(response.data.appliedJobs);
         setLoading(false);
         console.log(response);

@@ -27,7 +27,8 @@ if ("serviceWorker" in navigator) {
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-export const server = "http://localhost:8080";
+export const server = "https://wswe.onrender.com/";
+
 root.render(
   <BrowserRouter>
     <UserContextProvider>

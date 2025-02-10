@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { server } from "../..";
 
 const JobDetail = () => {
   const params = useParams();
@@ -27,7 +28,7 @@ const JobDetail = () => {
           },
         });
         const userResponse = await axios.post(
-          `http://localhost:8080/api/v1/user/bookmarks`,
+          `${server}/api/v1/user/bookmarks`,
           {},
           {
             headers: {

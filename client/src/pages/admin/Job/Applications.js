@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { server } from "../../..";
 
 const Applications = () => {
   const { jobId } = useParams();
   // console.log(jobId)
   const [applications, setApplications] = useState([]);
-  console.log(applications)
+  console.log(applications);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -18,7 +19,7 @@ const Applications = () => {
           return;
         }
         const response = await axios.get(
-          `http://localhost:8080/api/v1/job/${jobId}/applicants`,
+          `${server}/api/v1/job/${jobId}/applicants`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -38,9 +39,7 @@ const Applications = () => {
 
   return (
     <div className="p-4 max-w-7xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">
-        List of all Applications:
-      </h1>
+      <h1 className="text-2xl font-bold mb-4">List of all Applications:</h1>
       {loading ? (
         <p>Loading applications...</p>
       ) : applications.length === 0 ? (
