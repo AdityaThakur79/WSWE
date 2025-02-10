@@ -17,14 +17,6 @@ dotenv.config();
 // rest object
 const app = express();
 
-//Deplyment
-//static files
-app.use(express.static(path.join(__dirname, "./client/build")));
-
-app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
-
 // creating the middleware
 const server = http.createServer(app);
 app.use(cors());
@@ -125,6 +117,14 @@ io.on("connection", (socket) => {
     socket.join(linkId);
     console.log(`User joined room: ${linkId}`);
   });
+});
+
+//Deplyment
+//static files
+app.use(express.static(path.join(__dirname, "./client/build")));
+
+app.get("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
 const port = process.env.PORT || 8080;
