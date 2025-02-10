@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.51bc3ec1.css",
-    "main.js": "./static/js/main.4663c687.js",
+    "main.js": "./static/js/main.2cf1e131.js",
     "static/media/feature-2.PNG": "./static/media/feature-2.c06f5501dca9bcd975f2.PNG",
     "static/media/hero.jpg": "./static/media/hero.ff1056681e6ba2a86ad8.jpg",
     "static/media/pyscological.png": "./static/media/pyscological.cfdd52c04edde3890e0d.png",
@@ -22,10 +22,10 @@
     "static/media/lock.svg": "./static/media/lock.43ca3987cb3092f2ff97d86b65a32695.svg",
     "index.html": "./index.html",
     "main.51bc3ec1.css.map": "./static/css/main.51bc3ec1.css.map",
-    "main.4663c687.js.map": "./static/js/main.4663c687.js.map"
+    "main.2cf1e131.js.map": "./static/js/main.2cf1e131.js.map"
   },
   "entrypoints": [
     "static/css/main.51bc3ec1.css",
-    "static/js/main.4663c687.js"
+    "static/js/main.2cf1e131.js"
   ]
 }
