@@ -37,7 +37,6 @@ app.use("/api/v1/admin", adminRoutes);
 app.use("/api/v1/job", jobRoutes);
 
 //static files
-const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, "./client/build")));
 
 app.get("*", function (req, res) {
