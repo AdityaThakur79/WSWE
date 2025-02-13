@@ -37,6 +37,7 @@ app.use("/api/v1/admin", adminRoutes);
 app.use("/api/v1/job", jobRoutes);
 
 //static files
+const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, "./client/build")));
 
 app.get("*", function (req, res) {
@@ -98,7 +99,7 @@ app.post("/send-sos", async (req, res) => {
 // below is we are making the socket connection
 const io = new Server(server, {
   cors: {
-    origin: "https://wswe.onrender.com/", // Allow frontend running on port 3000
+    origin: "https://wswe.onrender.com", // Allow frontend running on port 3000
     methods: ["GET", "POST"],
   },
 });
