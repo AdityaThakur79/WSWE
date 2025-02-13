@@ -5,7 +5,7 @@ import axios from "axios";
 import { UserData } from "../../context/UserContext";
 
 // import { set } from 'mongoose';
-const socket = io("https://wswe.onrender.com/");
+const socket = io("http://localhost:3000");
 const LiveTracking = () => {
   const { user } = UserData();
   const [link, setLink] = useState("");
